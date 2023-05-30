@@ -1,11 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import HomepageContainer from './pages/Homepage/HomepageContainer';
 
-function App() {
+const App = () => {
+  
   return (
-    <div className="App">
-      <h1>Brainstorm force technical assignment</h1>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomepageContainer} />
+      </Switch>
+    </Router>
   );
 }
 
